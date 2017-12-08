@@ -11,12 +11,12 @@ var data =  { contact :[
 
 // Setup Restify Server
 var server = restify.createServer();
-//server.listen(process.env.port || process.env.PORT || 3978, function () {
-  // console.log('%s listening to %s', server.name, server.url); 
-//});
-server.listen(3978,'usc0lpit006',function () {
-  console.log('%s listening to %s', server.name, server.url); 
+server.listen(process.env.port || process.env.PORT || 3978, function () {
+   console.log('%s listening to %s', server.name, server.url); 
 });
+//server.listen(3978,'usc0lpit006',function () {
+  console.log('%s listening to %s', server.name, server.url); 
+//});
 
 // Create chat connector for communicating with the Bot Framework Service
 var connector = new builder.ChatConnector({
